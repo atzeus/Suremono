@@ -9,6 +9,9 @@ module Mono where
 -- (forall x. Mono x). This is the reason that STRefs (and IORefs) 
 -- are type-safe: references are monomorphic.
 
+-- Note that if the Mono constructor was exported
+-- we could easily make a value of type (forall x. Mono s (f x))
+
 data Mono s a = Mono -- constructor not exported
 
 newtype MonoM s a = MonoM a -- constructor not exported
