@@ -10,7 +10,8 @@ module Mono where
 -- are type-safe: references are monomorphic.
 
 -- Note that if the Mono constructor was exported
--- we could easily make a value of type (forall x. Mono s (f x))
+-- we could easily make a value of type (forall x. Mono s x),
+-- it is the type of the constructor
 
 data Mono s a = Mono -- constructor not exported
 
