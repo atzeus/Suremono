@@ -1,5 +1,5 @@
 {-# LANGUAGE Rank2Types #-}
-module Mono where
+module Mono(Mono,MonoM, newMono, runMono) where
 
 -- Claim: using this interface (meaning excluding the constructors),
 -- there is no term we can form, such that a subterm (other than undefined) has type 
