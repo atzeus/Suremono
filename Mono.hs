@@ -16,6 +16,7 @@ module Mono(Mono,MonoM, newMono, runMono) where
 data Mono s a = Mono -- constructor not exported
 
 newtype MonoM s a = MonoM a -- constructor not exported
+   deriving (Functor,Applicative,Monad,MonadFix)
 
 newMono :: MonoM s (Mono s a)
 newMono = MonoM Mono
